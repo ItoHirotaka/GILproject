@@ -5,11 +5,17 @@ using UnityEngine.UI;
 
 public class FadeUi : MonoBehaviour
 {
+    public enum FadeState
+    {
+        Normal = 0,
+        FadeIn,
+        FadeOut
+    }
     [SerializeField]
-    bool fade=false;
+    FadeState state = FadeState.Normal;
   
     [SerializeField]
-    Image image=null;
+    Image image = null;
     [SerializeField]
     float fadeSpeed = 0.02f;
 
@@ -31,31 +37,55 @@ public class FadeUi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fade)
+        switch (state)
         {
-          FadeIn();
+            case FadeState.Normal   : break;
+            case FadeState.FadeIn   : FadeIn(); break;
+            case FadeState.FadeOut  : FadeOut(); break;
+            default                 : SendMessage("FadeStateで問題が発生しています"); break;
         }
-        else
-        {
-            FadeOut();
-        }
-       
     }
 
+    public void ChangeState(FadeState _state)
+    {
+        if (state != _state)
+        {
+            state = _state;
+        }
+    }
+
+    float MaxAlpha = 1f;
     //フェードイン
     void FadeIn()
     {
-        alpha += fadeSpeed;
-        SetAlpha();
-       
+        if (alpha < MaxAlpha)
+        {
+            alpha += fadeSpeed;
+            if (alpha > MaxAlpha)
+            {
+                alpha = MaxAlpha;
+                ChangeState(FadeState.Normal);
+            }
+            SetAlpha();
+        }
     }
+
+    float MinAlpha = 0f;
     //フェードアウト
     void FadeOut()
     {
-        alpha -= fadeSpeed;
-        SetAlpha();
-       
+        if (alpha > MinAlpha)
+        {
+            alpha -= fadeSpeed;
+            if (alpha < MinAlpha)
+            {
+                alpha = MinAlpha;
+                ChangeState(FadeState.Normal);
+            }
+            SetAlpha();
+        }
     }
+
     //透明度を変更
     void SetAlpha()
     {

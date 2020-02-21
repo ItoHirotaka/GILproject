@@ -4,20 +4,37 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    GameObject FadeImage;
+    FadeUi fadeUi;
+
+    [SerializeField]
+    GameObject player;
+    Transform playerTr;
+
     void Start()
     {
-        StartGame
+        //コンポーネントの取得
+        fadeUi = FadeImage.GetComponent<FadeUi>();
+        playerTr = player.GetComponent<Transform>();
+
+        //開始時の演出
+        StartGame();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
+    [SerializeField]
+    Vector3 startPos;
     void StartGame()
     {
+        //フェードアウト
+        fadeUi.ChangeState(FadeUi.FadeState.FadeOut);
 
+        //プレイヤーの移動
+        //playerTr = 
     }
 }

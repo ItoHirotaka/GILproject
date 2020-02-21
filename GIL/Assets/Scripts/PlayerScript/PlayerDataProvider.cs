@@ -2,9 +2,9 @@
 
 public class PlayerDataProvider : MonoBehaviour
 {
-    [SerializeField] private PlayerMove playerMove = null;
+    [SerializeField] private PlayerController playerController = null;
 
-    public PlayerStateEnum IsPlayerStateEnum { get { return playerMove.playerState; } }//自機の状態
+    public PlayerStateEnum IsPlayerStateEnum { get { return playerController.playerState; } }//自機の状態
 
 
     // Update is called once per frame

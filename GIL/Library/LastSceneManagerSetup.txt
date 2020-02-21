@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Tsts.unity
+- path: Assets/Scenes/I_playerTset.unity
   isLoaded: 1
   isActive: 1

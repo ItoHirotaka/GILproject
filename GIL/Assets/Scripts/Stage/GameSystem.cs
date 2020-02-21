@@ -28,13 +28,13 @@ public class GameSystem : MonoBehaviour
     }
 
     [SerializeField]
-    Vector3 startPos;
+    GameObject startPos;
     void StartGame()
     {
         //フェードアウト
         fadeUi.ChangeState(FadeUi.FadeState.FadeOut);
 
-        //プレイヤーの移動
-        //playerTr = 
+        //プレイヤーを初期位置に移動
+        playerTr = startPos.transform;
     }
 }

@@ -232,3 +232,8 @@ C:\ProgramData\Unity\GILproject\GIL\obj\Debug\Assembly-CSharp.csproj.CoreCompile
 C:\ProgramData\Unity\GILproject\GIL\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\ProgramData\Unity\GILproject\GIL\obj\Debug\Assembly-CSharp.dll
 C:\ProgramData\Unity\GILproject\GIL\obj\Debug\Assembly-CSharp.pdb
+C:\ProgramData\Unity\GILproject\GIL\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
+C:\ProgramData\Unity\GILproject\GIL\Temp\bin\Debug\Unity.PackageManagerUI.Editor.pdb
+C:\ProgramData\Unity\GILproject\GIL\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
+C:\ProgramData\Unity\GILproject\GIL\Temp\bin\Debug\Unity.TextMeshPro.pdb
+C:\ProgramData\Unity\GILproject\GIL\Temp\bin\Debug\Unity.Analytics.DataPrivacy.pdb

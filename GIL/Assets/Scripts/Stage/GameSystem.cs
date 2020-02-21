@@ -35,6 +35,6 @@ public class GameSystem : MonoBehaviour
         fadeUi.ChangeState(FadeUi.FadeState.FadeOut);
 
         //プレイヤーを初期位置に移動
-        playerTr = startPos.transform;
+        playerTr.position = startPos.transform.position;
     }
 }

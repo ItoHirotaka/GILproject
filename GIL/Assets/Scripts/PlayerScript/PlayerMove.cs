@@ -1,9 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+public enum PlayerStateEnum
+{
+    LIQUID = 0,
+    ICE,
+    STEAM,
+};
+
+[RequireComponent(typeof(Rigidbody))] //Rigidbody追加
+[RequireComponent(typeof(Collider))]//Collider追加
+                                    //スクリプトアタッチ
+[RequireComponent(typeof(PlayerDataProvider))]
 
 public class PlayerMove : MonoBehaviour
 {
+   
+    public PlayerStateEnum playerState { get; private set; }//自機の状態
+
     //上限値
     [SerializeField]
     public float MaxPow;

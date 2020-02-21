@@ -50,6 +50,7 @@ public class FadeUi : MonoBehaviour
     {
         if (state != _state)
         {
+            Debug.Log(state);
             state = _state;
         }
     }

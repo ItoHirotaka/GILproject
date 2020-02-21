@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    int life;
     // Start is called before the first frame update
     void Start()
     {
-        life = 10;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("ああああああ");
-        Debug.Log(life);
+        // 左に移動
+        if (Input.GetKey(KeyCode.A))
+        {
+            this.transform.Translate(-0.1f, 0.0f, 0.0f);
+        }
+        // 右に移動
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.transform.Translate(0.1f, 0.0f, 0.0f);
+        }
+     
     }
 }

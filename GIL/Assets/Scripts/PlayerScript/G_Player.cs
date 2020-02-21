@@ -11,11 +11,6 @@ public class G_Player : MonoBehaviour
         Speed = 0.025f;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("すり抜けた！");
-    }
-
     // Update is called once per frame
     void Update()
     {

@@ -7,14 +7,14 @@ public enum PlayerStateEnum
     STEAM,
 };
 
-[RequireComponent(typeof(Rigidbody))] // Rigidbody追加
-[RequireComponent(typeof(Collider))]  // Collider追加
-                                      // スクリプトアタッチ
+[RequireComponent(typeof(Rigidbody2D))] // Rigidbody追加
+[RequireComponent(typeof(Collider))]    // Collider追加
+ // スクリプトアタッチ
 [RequireComponent(typeof(PlayerDataProvider))]
 
 public class PlayerController : MonoBehaviour
 {
-   
+
     public PlayerStateEnum playerState { get; private set; } // 自機の状態
 
     // 上限値
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Rigidbody rb;
 
+    // BodyのPrefab
     [SerializeField]
     GameObject liquidPref;
     [SerializeField]
@@ -34,81 +35,113 @@ public class PlayerController : MonoBehaviour
     GameObject steamPref;
 
     void Start()
-    { 
+    {
         // コンポーネントの取得
-        rb = GetComponent<Rigidbody>();
-        // Bodyを生成
+        rb = this.GetComponent<Rigidbody>();
+        // 状態を初期化し、Bodyを生成
         playerState = PlayerStateEnum.LIQUID;
-        CreateNewBody();
+        ChangeState();
+    }
+
+    private void FixedUpdate()
+    {
+        // 移動処理
+        Move();
     }
 
     void Update()
     {
-        // 移動処理
-        Move();
-
         // 状態変更
-        ChangeState();
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ChangeState();
+        }
     }
 
     void Move()
     {
-        Vector3 force = new Vector3(thrust, 0.0f, 0.0f);
-        // 左に移動
-        if (Input.GetKey(KeyCode.A) && rb.velocity.magnitude < MaxPow)
+        // X軸方向の入力を取得(-1 ～ 1)
+        float Hori = Input.GetAxis("Horizontal");
+        
+        if (Hori == 0f) // X軸の入力がなければ終了
         {
-            rb.AddForce(-force); // 力を加える
+            return;
         }
-        // 右に移動
-        if (Input.GetKey(KeyCode.D) && rb.velocity.magnitude < MaxPow)
+        else if (Hori < 0f) // 左方向の入力がある時
         {
-            rb.AddForce(force); // 力を加える
+            bool canMove_L = rb.velocity.x > -MaxPow;
+
+            if (canMove_L)
+            {
+                // 力を加える
+                Vector3 force = new Vector3(thrust * Hori, 0.0f, 0.0f);
+                rb.AddForce(force);
+            }
+        }
+        else // 右方向の入力がある時
+        {
+            bool canMove_R = rb.velocity.x < MaxPow;
+
+            if (canMove_R)
+            {
+                // 力を加える
+                Vector3 force = new Vector3(thrust * Hori, 0.0f, 0.0f);
+                rb.AddForce(force);
+            }
         }
     }
 
     void ChangeState()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        // 状態の変更
+        switch (playerState)
         {
-            // 状態の変更
-            switch (playerState)
-            {
-                case PlayerStateEnum.LIQUID: playerState = PlayerStateEnum.ICE; break;
-                case PlayerStateEnum.ICE: playerState = PlayerStateEnum.STEAM; break;
-                case PlayerStateEnum.STEAM: playerState = PlayerStateEnum.LIQUID; break;
-                default: SendMessage("存在しないプレイヤーの状態です"); break;
-            }
+            case PlayerStateEnum.LIQUID: playerState = PlayerStateEnum.ICE; break;
+            case PlayerStateEnum.ICE: playerState = PlayerStateEnum.STEAM; break;
+            case PlayerStateEnum.STEAM: playerState = PlayerStateEnum.LIQUID; break;
+            default: SendMessage("存在しないプレイヤーの状態です"); break;
+        }
 
-            // 新しい子オブジェクトを生成
-            CreateNewBody();
+        // 新しい状態のコンポーネントへ切り替える
+        ChangeFoamComponent();
+
+        //新しいBodyを生成
+        ChangeBody();
+    }
+
+    //前の状態のコンポーネントを外し、新しいコンポーネントをセットする
+    void ChangeFoamComponent()
+    {
+        switch (playerState)
+        {
+            case PlayerStateEnum.LIQUID : break;
+            case PlayerStateEnum.ICE    : this.gameObject.AddComponent<G_Player>(); break;
+            case PlayerStateEnum.STEAM  : Destroy(this.GetComponent<G_Player>()); break;
+            default: SendMessage("存在しないプレイヤーの状態です"); break;
         }
     }
 
-    //現在の状態を見て、新しいBodyを生成する
-    void CreateNewBody()
+    // 現在の状態を見て、新しいBodyに変更する
+    void ChangeBody()
     {
         // 現在のBodyを破壊
         foreach (Transform c in this.transform)
         {
-            GameObject.Destroy(c.gameObject);
+            // 取得した子オブジェクトのタグが"Body"の場合破壊する
+            if (c.tag == "Body")
+            {
+                GameObject.Destroy(c.gameObject);
+                break;
+            }
         }
 
-        // 新しいBodyを生成
-        GameObject obj = null;
-        switch (playerState)    // 生成するBodyを決定
+        // Bodyを生成
+        switch (playerState)
         {
-            case PlayerStateEnum.LIQUID : obj = icePref     ; break;
-            case PlayerStateEnum.ICE    : obj = steamPref   ; break;
-            case PlayerStateEnum.STEAM  : obj = liquidPref  ; break;
+            case PlayerStateEnum.LIQUID : Instantiate(icePref, this.transform); break;
+            case PlayerStateEnum.ICE    : Instantiate(steamPref, this.transform); break;
+            case PlayerStateEnum.STEAM  : Instantiate(liquidPref, this.transform); break;
+            default: SendMessage("存在しないプレイヤーの状態です"); break;
         }
-        if (obj == null) // 生成するBodyが無い場合終了する
-        {
-            SendMessage("Bodyの生成に失敗しました");
-            return;
-        }
-        Instantiate(obj, this.transform);
-
-        // 生成したBodyを子に設定
-        obj.transform.SetParent(this.transform);
     }
 }

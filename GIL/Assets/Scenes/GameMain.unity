@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,7 +288,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460259736}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 871c85f7b15face42b0d7055ffa6adb0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -447,7 +447,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035879961}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 871c85f7b15face42b0d7055ffa6adb0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -669,6 +669,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.76508707, y: 0.078826874, z: 0.07654508}
   m_Center: {x: 0.1517195, y: -0.15171923, z: 0.000000015894573}
+--- !u!65 &1529397907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529397901}
+  m_Material: {fileID: 13400000, guid: 871c85f7b15face42b0d7055ffa6adb0, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.002436956, y: 0.3822639, z: 0.07654508}
+  m_Center: {x: -0.23132138, y: 0, z: 0.000000015894573}
 --- !u!1 &1562733814
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +720,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562733814}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 871c85f7b15face42b0d7055ffa6adb0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -751,7 +764,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589478111}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 871c85f7b15face42b0d7055ffa6adb0, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -798,9 +811,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100002, guid: ac3578bc85aedef4982d12cdb30dcfb3, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ac3578bc85aedef4982d12cdb30dcfb3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: ac3578bc85aedef4982d12cdb30dcfb3, type: 3}
       propertyPath: m_Name
       value: stage01_model
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ac3578bc85aedef4982d12cdb30dcfb3, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: ac3578bc85aedef4982d12cdb30dcfb3, type: 3}
       propertyPath: m_Layer
@@ -1152,12 +1177,11 @@ MonoBehaviour:
   MaxPow: 2
   thrust: 10
   rb: {fileID: 2146708477}
-  liquidPref: {fileID: 517206865251128804, guid: 83e701380e1c10b4dace91fd44e18a7d,
+  liquidPref: {fileID: 997472405517565831, guid: cef827307d51ff2438503a40f68f986e,
     type: 3}
   icePref: {fileID: 4121317482273014073, guid: 30dbbaf52d3bc9747b2dad5012845347, type: 3}
   steamPref: {fileID: 2151081887471519288, guid: de94cbf3acef4a645b317355c2449847,
     type: 3}
-  velocity: {x: 0, y: 0, z: 0}
 --- !u!54 &2146708477
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1199,7 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fff2222453197f4985d0da13bd7d22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 2146708476}
 --- !u!114 &2146708480
 MonoBehaviour:
   m_ObjectHideFlags: 0

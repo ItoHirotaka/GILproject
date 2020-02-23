@@ -5,7 +5,9 @@ using UnityEngine;
 public class G_Player : MonoBehaviour
 {
     [SerializeField]
-    private float Speed = 11f; // テスト段階での数値。Inspectorで調整してください
+    float MaxSpeed = 11f; // テスト段階での数値。Inspectorで調整してください
+    [SerializeField]
+    float Speed = 11f; // テスト段階での数値。Inspectorで調整してください
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,11 @@ public class G_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Vector3.up * Speed);
+        bool canMove_U = rb.velocity.y < MaxSpeed;
+        if (canMove_U)
+        {
+            rb.AddForce(Vector3.up * Speed);
+        }
         //// transformを取得
         //Transform myTransform = this.transform;
         //// 現在の座標からのxyz を1ずつ加算して移動

@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class ClearJudge : MonoBehaviour
 {
-    public bool IsClear { get; private set; }
+    [SerializeField]
+    GameObject GameSystem = null;
+    GameSystem gameSystem;
 
     private void Start()
     {
-        IsClear = false;
+        // コンポーネントの取得
+        gameSystem = GameSystem.GetComponent<GameSystem>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            IsClear = true;
+            gameSystem.Clear();
         }
     }
 }

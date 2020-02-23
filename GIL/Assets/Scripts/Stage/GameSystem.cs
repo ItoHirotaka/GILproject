@@ -4,37 +4,25 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
-    [SerializeField]
-    GameObject FadeImage;
-    FadeUi fadeUi;
+    StartDirector startDir;
+    ClearDirector clearDir;
+    DeathDirector deathDir;
 
-    [SerializeField]
-    GameObject player;
-    Transform playerTr;
-
-    void Start()
+    private void Start()
     {
-        //コンポーネントの取得
-        fadeUi = FadeImage.GetComponent<FadeUi>();
-        playerTr = player.GetComponent<Transform>();
-
-        //開始時の演出
-        StartGame();
+        // コンポーネントの取得
+        startDir = this.GetComponent<StartDirector>();
+        clearDir = this.GetComponent<ClearDirector>();
+        deathDir = this.GetComponent<DeathDirector>();
     }
 
-    void Update()
+    public void Clear()
     {
-        
+        clearDir.Clear();
     }
 
-    [SerializeField]
-    GameObject startPos;
-    void StartGame()
+    public void Death()
     {
-        //フェードアウト
-        fadeUi.ChangeState(FadeUi.FadeState.FadeOut);
-
-        //プレイヤーを初期位置に移動
-        playerTr.position = startPos.transform.position;
+        deathDir.Death();
     }
 }

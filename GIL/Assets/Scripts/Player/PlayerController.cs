@@ -16,6 +16,7 @@ public enum PlayerStateEnum
 public class PlayerController : MonoBehaviour
 {
     public PlayerStateEnum playerState { get; private set; } // 自機の状態
+    public bool canControl { get; private set; }    // 操作状態を管理
 
     // 上限値
     [SerializeField]
@@ -49,19 +50,28 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // 移動処理
-        Move();
+        // 操作出来る状態なら
+        if (canControl)
+        {
+            // 移動処理
+            Move();
+        }
     }
 
     void Update()
     {
-        // 状態変更
-        if (Input.GetKeyDown(KeyCode.Return))
+        // 操作出来る状態なら
+        if (canControl)
         {
-            ChangeState();
+            // 状態変更
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                ChangeState();
+            }
         }
     }
 
+    // 移動処理
     void Move()
     {
         // X軸方向の入力を取得(-1 ～ 1)
@@ -126,6 +136,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // プレイヤーの状態を変化させる
     void ChangeState()
     {
         // 次の状態をセット
@@ -194,5 +205,11 @@ public class PlayerController : MonoBehaviour
             case PlayerStateEnum.STEAM  : Instantiate(steamPref, this.transform); break;
             default: SendMessage("存在しないプレイヤーの状態です"); break;
         }
+    }
+
+    // プレイヤーの操作状態を設定する
+    public void UseControl(bool _isUse)
+    {
+        canControl = _isUse;
     }
 }

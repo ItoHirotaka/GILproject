@@ -67,6 +67,7 @@ public class StartDirector : MonoBehaviour
         if (count < 0f)
         {
             StartGame();
+            Destroy(this.GetComponent<StartDirector>());
         }
     }
 }

@@ -16,6 +16,12 @@ public class GameSystem : MonoBehaviour
         deathDir = this.GetComponent<DeathDirector>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            Death();
+    }
+
     public void Clear()
     {
         clearDir.Clear();

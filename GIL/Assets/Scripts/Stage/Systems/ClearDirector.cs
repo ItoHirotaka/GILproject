@@ -31,7 +31,7 @@ public class ClearDirector : MonoBehaviour
         }
     }
 
-    // ゲーム状態を変更する
+    // クリア状態を変更する
     public void Clear()
     {
         // クリアフラグを立てる

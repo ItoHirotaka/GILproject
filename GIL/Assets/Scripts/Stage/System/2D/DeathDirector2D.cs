@@ -40,7 +40,7 @@ public class DeathDirector2D : MonoBehaviour
         // 演出時間の初期化
         count = DontControlTime;
         // フェードイン
-        fadeUi.ChangeState(FadeUi.FadeState.FadeOut);
+        fadeUi.ChangeState(FadeUi.FadeState.FadeIn);
         // プレイヤーの操作を無効化
         player.GetComponent<PlayerController2D>().UseControl(false);
     }

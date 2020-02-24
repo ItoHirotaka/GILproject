@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class G_Player2D : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class G_Player2D : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         this.gameObject.layer = 11;
+        
     }
 
     // Update is called once per frame

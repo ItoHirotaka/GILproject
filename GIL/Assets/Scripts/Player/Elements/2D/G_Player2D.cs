@@ -13,6 +13,7 @@ public class G_Player2D : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        this.gameObject.layer = 11;
     }
 
     // Update is called once per frame

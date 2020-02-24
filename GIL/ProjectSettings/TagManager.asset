@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Body
+  - Stage
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - 
   - PostProcessing
   - kanaami
-  - mizu
-  - suijouki
-  - koori
-  - 
+  - Liquid
+  - Steam
+  - Ice
+  - Goal
   - 
   - 
   - 

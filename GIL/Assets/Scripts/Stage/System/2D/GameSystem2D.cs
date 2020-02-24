@@ -18,7 +18,6 @@ public class GameSystem2D : MonoBehaviour
 
     public void Clear()
     {
-        Debug.Log("GameSystem2D通過");
         clearDir.Clear();
     }
 

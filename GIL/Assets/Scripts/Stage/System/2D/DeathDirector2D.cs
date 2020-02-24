@@ -52,7 +52,7 @@ public class DeathDirector2D : MonoBehaviour
         // 時間経過でゲームメインをロード
         if (count < 0f)
         {
-            SceneManager.LoadScene("GameMain");
+            SceneManager.LoadScene("GameMain2D");
         }
     }
 }

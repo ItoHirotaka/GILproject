@@ -145,6 +145,8 @@ public class PlayerController2D : MonoBehaviour
         ChangeFoamComponent();
         // 新しいBodyを生成
         ChangeBody();
+        // 新しい状態の画像に切り替える
+        ChangeElementImage();
     }
 
     // 現在の状態を見て、次の状態をセットする
@@ -211,5 +213,11 @@ public class PlayerController2D : MonoBehaviour
     public void UseControl(bool _isUse)
     {
         canControl = _isUse;
+    }
+
+    // 新しい状態の画像に切り替える
+    void ChangeElementImage()
+    {
+
     }
 }

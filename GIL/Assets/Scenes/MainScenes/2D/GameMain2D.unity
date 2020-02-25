@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b640d1693be31146ba6a72845e93fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathFall: -10
+  DeathFall: -13
 --- !u!1 &1837952679
 GameObject:
   m_ObjectHideFlags: 0

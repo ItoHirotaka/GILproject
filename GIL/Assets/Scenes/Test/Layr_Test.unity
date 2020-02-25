@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 412324331}
   - component: {fileID: 412324330}
   m_Layer: 5
-  m_Name: ElementImage2
+  m_Name: IceImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300.5, y: 146.5}
+  m_AnchoredPosition: {x: -160, y: 67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412324330
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 534029356}
   - component: {fileID: 534029355}
   m_Layer: 5
-  m_Name: ElementImage3
+  m_Name: GasImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300.5, y: 146.5}
+  m_AnchoredPosition: {x: -160, y: 67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534029355
@@ -529,7 +529,7 @@ Transform:
   m_LocalScale: {x: 147.28265, y: 147.28265, z: 147.28265}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926316966
 GameObject:
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 1620052341}
   - component: {fileID: 1620052340}
   m_Layer: 5
-  m_Name: ElementImage
+  m_Name: LiquidImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300.5, y: 146.5}
+  m_AnchoredPosition: {x: -160, y: 67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620052340
@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 1926230411}
   - component: {fileID: 1926230410}
   m_Layer: 5
-  m_Name: ElementlCanvas
+  m_Name: ElementalCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1222,13 +1222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2d8b5172bd51545a7f2631325201c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LiquidImage: {fileID: 0}
-  GasImage: {fileID: 0}
-  IceImage: {fileID: 0}
+  LiquidImage: {fileID: 1620052338}
+  GasImage: {fileID: 534029353}
+  IceImage: {fileID: 412324328}
 --- !u!114 &1926230411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,7 +1300,7 @@ RectTransform:
   - {fileID: 412324329}
   - {fileID: 534029354}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

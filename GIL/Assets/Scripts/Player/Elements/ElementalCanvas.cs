@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ElementlCanvas : MonoBehaviour
+public class ElementalCanvas : MonoBehaviour
 {
     [SerializeField]
     GameObject LiquidImage;
@@ -15,19 +16,20 @@ public class ElementlCanvas : MonoBehaviour
 
     public void ChangeImage(PlayerStateEnum2D _state)
     {
+        Debug.Log("呼ばれた");
         if (_state == PlayerStateEnum2D.LIQUID)
         {
             LiquidImage.SetActive(true);
             GasImage.SetActive(false);
             IceImage.SetActive(false);
         }
-        if (_state == PlayerStateEnum2D.STEAM)
+        else if (_state == PlayerStateEnum2D.STEAM)
         {
             LiquidImage.SetActive(false);
             GasImage.SetActive(true);
             IceImage.SetActive(false);
         }
-        if (_state == PlayerStateEnum2D.ICE)
+        else if (_state == PlayerStateEnum2D.ICE)
         {
             LiquidImage.SetActive(false);
             GasImage.SetActive(false);

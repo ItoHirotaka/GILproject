@@ -96,7 +96,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 448}
   m_MaxSize: {x: 22012, y: 10024}
   vertical: 0
-  controlID: 49
+  controlID: 139
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 71
+  controlID: 72
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,8 +214,8 @@ MonoBehaviour:
     y: 0
     width: 416
     height: 987
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -304,7 +304,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 98eeffff1eefffffb6efffff76f8ffffdcf8ffffdefbffff2c0f0000
+      m_ExpandedIDs: a0ddffffdefbffff520f0000680f00009a0f0000a40f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -401,20 +401,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Stage
+    - Assets/Images
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Stage
+  - Assets/Images
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\Class\\JAM\\2020\u5E742\u6708\u672B\\GILproject\\GIL"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c0d0000
-    m_LastClickedID: 3356
-    m_ExpandedIDs: 0000000086070000980a0000660b0000da0b00008e0c0000ba0c0000fe0c0000120e00005e0e00008a2c00008c2c000000ca9a3b
+    m_SelectedIDs: 5e0e0000
+    m_LastClickedID: 3678
+    m_ExpandedIDs: 0000000084070000960a0000640b0000d80b00008c0c0000b40c0000b80c0000fa0c00000c0e0000580e00005e0e0000a62c0000a82c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -442,7 +442,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000086070000980a0000660b0000740b0000da0b00008e0c0000b60c0000ba0c0000fe0c00001c0d0000120e00002c0e00005e0e00008a2c00008c2c0000
+    m_ExpandedIDs: 0000000084070000960a0000640b0000d80b00008c0c0000b80c0000fa0c00000c0e0000580e0000a62c0000a82c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -526,17 +526,17 @@ MonoBehaviour:
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -396.5
-    m_HBaseRangeMax: 396.5
-    m_VBaseRangeMin: -223
-    m_VBaseRangeMax: 223
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -556,7 +556,7 @@ MonoBehaviour:
       y: 17
       width: 963
       height: 446
-    m_Scale: {x: 1, y: 1}
+    m_Scale: {x: 0.41296297, y: 0.41296297}
     m_Translation: {x: 481.5, y: 223}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -564,12 +564,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -481.5
-      y: -223
-      width: 963
-      height: 446
+      x: -1165.9641
+      y: -540
+      width: 2331.9282
+      height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.41296297
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 963, y: 463}
@@ -608,9 +608,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 77.30379, y: 221.77875, z: -122.4613}
+    m_Target: {x: -2.75, y: -3.83, z: 0}
     speed: 2
-    m_Value: {x: 77.30379, y: 221.77875, z: -122.4613}
+    m_Value: {x: -2.75, y: -3.83, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -642,9 +642,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: -1}
   m_Size:
-    m_Target: 409.3634
+    m_Target: 13.105369
     speed: 2
-    m_Value: 409.3634
+    m_Value: 13.105369
   m_Ortho:
     m_Target: 0
     speed: 2

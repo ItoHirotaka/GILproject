@@ -16,6 +16,10 @@ public class DeathDirector2D : MonoBehaviour
     FadeUi fadeUi;
 
     [SerializeField]
+    GameObject Elemental = null;
+    ElementalCanvas elementalCanvas;
+
+    [SerializeField]
     GameObject player = null;
 
     //イメージを取得
@@ -32,6 +36,7 @@ public class DeathDirector2D : MonoBehaviour
     {
         // コンポーネントの取得
         fadeUi = FadeImage.GetComponent<FadeUi>();
+        elementalCanvas = Elemental.GetComponent<ElementalCanvas>();
         // 死亡状態の初期化
         isDeath = false;
         //音のコンポーネントを取得
@@ -65,6 +70,8 @@ public class DeathDirector2D : MonoBehaviour
         isDeath = true;
         // 演出時間の初期化
         count = DontControlTime;
+        // 属性画像を非表示
+        elementalCanvas.Death();
         // フェードイン
         fadeUi.ChangeState(FadeUi.FadeState.FadeIn);
         // プレイヤーの操作を無効化

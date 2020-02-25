@@ -36,4 +36,11 @@ public class ElementalCanvas : MonoBehaviour
             IceImage.SetActive(true);
         }
     }
+
+    public void Death()
+    {
+        LiquidImage.SetActive(false);
+        GasImage.SetActive(false);
+        IceImage.SetActive(false);
+    }
 }

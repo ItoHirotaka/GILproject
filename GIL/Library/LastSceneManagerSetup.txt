@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: C:/Users/G0721/Desktop/aaa/GILTest/test/Assets/Scenes/SampleScene.unity
-=======
-- path: Assets/Scenes/Test/Layr_Test.unity
->>>>>>> 0aba02651788bd86e3fe1209842ac4f2d885299b
+- path: Assets/Scenes/Test/StageTest.unity
   isLoaded: 1
   isActive: 1

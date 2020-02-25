@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/G0721/Desktop/aaa/GILTest/test/Assets/Scenes/MainScenes/2D/GameMain2D.unity
+- path: Assets/Scenes/TestScenes/Base/Base2D.unity
   isLoaded: 1
   isActive: 1

@@ -25,13 +25,11 @@ public class GroundCheck : MonoBehaviour
     }
 
     [SerializeField]
-    float DeathFall = -10f;  // 死亡判定にする速さ
+    float DeathFall = -13f;  // 死亡判定にする速さ
     bool isDeath()
     {
         bool isDeathHight = rb.velocity.y < DeathFall;
         bool isIce = player.layer == ICE_LAYER;
-        Debug.Log(player.layer);
-        Debug.Log(isIce);
         return isDeathHight && isIce;
     }
 }

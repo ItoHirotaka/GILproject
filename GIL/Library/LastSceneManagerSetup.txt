@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Test/Layr_Test.unity
+- path: Assets/Scenes/Test/G_PlayerTest.unity
   isLoaded: 1
   isActive: 1

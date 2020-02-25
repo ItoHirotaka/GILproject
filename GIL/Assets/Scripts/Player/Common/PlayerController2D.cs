@@ -9,7 +9,7 @@ public enum PlayerStateEnum2D
 };
 
 [RequireComponent(typeof(Rigidbody2D))] // Rigidbody追加
-[RequireComponent(typeof(Collider2D))]    // Collider追加
+[RequireComponent(typeof(Collider2D))]  // Collider追加
                                         // スクリプトアタッチ
 [RequireComponent(typeof(PlayerDataProvider2D))]
 
@@ -37,10 +37,15 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     GameObject steamPref;
 
+    // 属性変更用
+    ElementlCanvas elementlCanvas;
+
     void Start()
     {
         // コンポーネントの取得
         rb = this.GetComponent<Rigidbody2D>();
+        GameObject canvas = GameObject.Find("ElementalCanvas");
+        elementlCanvas = canvas.GetComponent<ElementlCanvas>();
         // モデルの向きを初期化
         isRightModel = true;
         // 状態を初期化し、Bodyを生成
@@ -67,6 +72,7 @@ public class PlayerController2D : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 ChangeState();
+                elementlCanvas.ChangeImage(playerState);
             }
         }
     }

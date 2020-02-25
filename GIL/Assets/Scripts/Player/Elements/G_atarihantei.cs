@@ -15,8 +15,11 @@ public class G_atarihantei : MonoBehaviour
     {
         
     }
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("すり抜けている");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("すり抜けている");
+        }
     }
 }

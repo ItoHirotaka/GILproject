@@ -114,10 +114,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 971
-  m_MinSize: {x: 917, y: 448}
-  m_MaxSize: {x: 22012, y: 10024}
+  m_MinSize: {x: 909, y: 448}
+  m_MaxSize: {x: 22004, y: 10000}
   vertical: 0
-  controlID: 7138
+  controlID: 2177
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 448}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 7151
+  controlID: 2092
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -463,7 +463,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 382cfdffcc38fdffea3bfdffe43cfdff103ffdff1ce4ffffdefbffffd20f000082320000c0340000ca350000ee3800004c390000
+      m_ExpandedIDs: 82fbffffa0fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,20 +525,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Images
+    - Assets/Images/stage01_export
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Images
+  - Assets/Images/stage01_export
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\Class\\JAM\\2020\u5E742\u6708\u672B\\GILproject\\GIL"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 780e0000
-    m_LastClickedID: 3704
-    m_ExpandedIDs: 0000000084070000980a0000680b0000e40b00005c0c0000980c0000c80c0000cc0c0000120d0000bc0d0000260e0000400e0000720e0000ae0e0000d42c0000d62c000000ca9a3b
+    m_SelectedIDs: c02a0000
+    m_LastClickedID: 10944
+    m_ExpandedIDs: 00000000840700008227000058280000d02800004629000080290000b0290000b4290000f42900009c2a0000e82a0000002b0000342b00003a2b0000762b0000fe2c0000002d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000084070000980a0000680b0000e40b00005c0c0000980c0000c80c0000cc0c0000120d0000bc0d0000260e0000400e0000720e0000ae0e0000d42c0000d62c000000ca9a3b
+    m_ExpandedIDs: 00000000840700008227000058280000d02800004629000080290000b0290000b4290000f42900009c2a0000e82a0000002b0000342b00003a2b0000762b0000fe2c0000002d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

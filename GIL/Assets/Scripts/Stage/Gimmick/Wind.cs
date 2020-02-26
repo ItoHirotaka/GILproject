@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fan : MonoBehaviour
+public class Wind : MonoBehaviour
 {
     GameSystem2D GameSystem;
     // Start is called before the first frame update

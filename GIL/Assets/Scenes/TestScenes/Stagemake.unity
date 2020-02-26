@@ -124,6 +124,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage_03
       objectReference: {fileID: 0}
+    - target: {fileID: 2463584682019467422, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618676, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618677, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618677, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618677, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618677, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618677, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009635537763618677, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8751156819867012910, guid: b42b12279f26a98459b386b2d09efe47,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +217,11 @@ PrefabInstance:
     - target: {fileID: 8751156819867012910, guid: b42b12279f26a98459b386b2d09efe47,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019378217479321865, guid: b42b12279f26a98459b386b2d09efe47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

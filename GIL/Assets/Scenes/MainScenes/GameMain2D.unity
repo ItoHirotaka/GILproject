@@ -1842,6 +1842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755877789}
   - component: {fileID: 1755877788}
+  - component: {fileID: 1755877790}
   m_Layer: 9
   m_Name: kanaami
   m_TagString: Untagged
@@ -1911,6 +1912,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1755877790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755877787}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 13.76, y: 1.05}
+    newSize: {x: 13.76, y: 1.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.76, y: 1.05}
+  m_EdgeRadius: 0
 --- !u!1 &1837952679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,10 +2023,10 @@ MonoBehaviour:
   MaxPow: 2
   thrust: 10
   rb: {fileID: 1837952681}
-  liquidPref: {fileID: 8592986376210050448, guid: e25969b46eaa402458abb3e730860de7,
+  liquidPref: {fileID: 488737176545482094, guid: d26af012f2b8bb04782e3a0a4c4444c1,
     type: 3}
-  icePref: {fileID: 3446205420883116294, guid: bdc4b21900f7b4d48a0ee3c3a487b787, type: 3}
-  steamPref: {fileID: 1873874677517590101, guid: bf9312b8ce90e5241a959ee29f5beeab,
+  icePref: {fileID: 891136246529989061, guid: bc43354f3376a8547a1d1ad1c9f05c2f, type: 3}
+  steamPref: {fileID: 3117158688440967160, guid: f6e4bb10d46b0024bab783bef74e6d83,
     type: 3}
 --- !u!4 &1837952684
 Transform:

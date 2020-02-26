@@ -12,8 +12,7 @@ public class StartDirector2D : MonoBehaviour
     GameObject player = null;
     Transform playerTr;
 
-    [SerializeField]
-    GameObject startPos = null;
+    Transform startPos = null;
 
     bool isStart;
 
@@ -22,6 +21,8 @@ public class StartDirector2D : MonoBehaviour
         // コンポーネントの取得
         fadeUi = FadeImage.GetComponent<FadeUi>();
         playerTr = player.transform;
+        // 開始座標を取得
+        startPos = GameObject.Find("StartPosition").transform;
         // 開始状態の初期化
         isStart = false;
         // 開始前の演出を初期化
@@ -56,7 +57,7 @@ public class StartDirector2D : MonoBehaviour
         // フェードアウト
         fadeUi.ChangeState(FadeUi.FadeState.FadeOut);
         // プレイヤーを初期位置に移動
-        playerTr.position = startPos.transform.position;
+        playerTr.position = startPos.position;
         // プレイヤーの操作を無効化
         player.GetComponent<PlayerController2D>().UseControl(false);
     }

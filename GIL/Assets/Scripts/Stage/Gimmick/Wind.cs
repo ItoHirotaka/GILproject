@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class G_desu : MonoBehaviour
+public class Fan : MonoBehaviour
 {
     GameSystem2D GameSystem;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +12,9 @@ public class G_desu : MonoBehaviour
         GameSystem = system.GetComponent<GameSystem2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer==11)
+        if (collision.gameObject.layer == 11)
         {
             GameSystem.Death();
         }

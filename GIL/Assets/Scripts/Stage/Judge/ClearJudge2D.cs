@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class ClearJudge2D : MonoBehaviour
 {
-    [SerializeField]
-    GameObject GameSystem = null;
     GameSystem2D gameSystem;
 
     private void Start()
     {
         // コンポーネントの取得
+        GameObject GameSystem = GameObject.Find("GameSystem");
         gameSystem = GameSystem.GetComponent<GameSystem2D>();
     }
 

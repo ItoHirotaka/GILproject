@@ -16,7 +16,6 @@ public class ElementalCanvas : MonoBehaviour
 
     public void ChangeImage(PlayerStateEnum2D _state)
     {
-        Debug.Log("呼ばれた");
         if (_state == PlayerStateEnum2D.LIQUID)
         {
             LiquidImage.SetActive(true);

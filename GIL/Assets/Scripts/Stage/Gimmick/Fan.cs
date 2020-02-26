@@ -12,16 +12,8 @@ public class Fan : MonoBehaviour
         GameSystem = system.GetComponent<GameSystem2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 11)
-        {
-            GameSystem.Death();
-        }
+        GameSystem.Death();
     }
 }

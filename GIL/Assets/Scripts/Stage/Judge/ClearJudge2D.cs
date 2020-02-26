@@ -18,7 +18,6 @@ public class ClearJudge2D : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Judge通過");
             gameSystem.Clear();
         }
     }

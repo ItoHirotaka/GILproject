@@ -18,7 +18,7 @@ public class ChangeSceneScript : MonoBehaviour
         switch (changeType)
         {
             case SceneType.Title: SceneManager.LoadScene("Title"); break;
-            case SceneType.GameMain: SceneManager.LoadScene("GameMain"); break;
+            case SceneType.GameMain: SceneManager.LoadScene("GameMain2D"); break;
         }
     }
 }

@@ -11,15 +11,22 @@ public class TitleCanvas : MonoBehaviour
 
     int currentNum;
 
-    //イメージの取得
-    Image image;
-    Sprite sprite;
+    public GameObject[] TitleImage;
 
-    SpriteRenderer MainSpriteRenderer;
-    public Sprite[] sprites;
+    //イメージの取得
+    //Image image;
+    //Sprite sprite;
+
+    //SpriteRenderer MainSpriteRenderer;
+    //public Sprite[] sprites;
 
     private void Start()
     {
+        //TitleImage[0] = transform.Find("Resource/Title_01").gameObject;
+        //TitleImage[1] = transform.Find("Resource/Title_02").gameObject;
+        //TitleImage[2] = transform.Find("Resource/Title_03").gameObject;
+        //TitleImage[3] = transform.Find("Resource/Title_04").gameObject;
+
         StageMax = 3; //仮置きで3にしておきます。
         if (PlayerPrefs.HasKey("StageNum"))
         {
@@ -31,7 +38,7 @@ public class TitleCanvas : MonoBehaviour
         }
 
         // このobjectのSpriteRendererを取得
-        MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        //MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -59,34 +66,38 @@ public class TitleCanvas : MonoBehaviour
     {
         // SpriteRenderのspriteを設定済みの他のspriteに変更
         // 例) HoldSpriteに変更
-        MainSpriteRenderer.sprite = sprites[currentNum];
-        //if (currentNum == 0)
-        //{
-        //    // SpriteRenderのspriteを設定済みの他のspriteに変更
-        //    // 例) HoldSpriteに変更
-        //    MainSpriteRenderer.sprite = HoldSprite;
-        //    Debug.Log("１：呼ばれた");
-        //}
-        //if (currentNum == 1)
-        //{
-        //    sprite = Resources.Load<Sprite>("Resources/Title_02");
-        //    image = this.GetComponent<Image>();
-        //    image.sprite = sprite;
-        //    Debug.Log("２：呼ばれた");
-        //}
-        //if (currentNum == 2)
-        //{
-        //    sprite = Resources.Load<Sprite>("Title_03");
-        //    image = this.GetComponent<Image>();
-        //    image.sprite = sprite;
-        //    Debug.Log("３：呼ばれた");
-        //}
-        //if (currentNum == 3)
-        //{
-        //    sprite = Resources.Load<Sprite>("Title_04");
-        //    image = this.GetComponent<Image>();
-        //    image.sprite = sprite;
-        //    Debug.Log("４：呼ばれた");
-        //}
+        //MainSpriteRenderer.sprite = sprites[currentNum];
+        if (currentNum == 0)
+        {
+            TitleImage[0].SetActive(true);
+            TitleImage[1].SetActive(false);
+            TitleImage[2].SetActive(false);
+            TitleImage[3].SetActive(false);
+            Debug.Log("１：呼ばれた");
+        }
+        if (currentNum == 1)
+        {
+            TitleImage[0].SetActive(false);
+            TitleImage[1].SetActive(true);
+            TitleImage[2].SetActive(false);
+            TitleImage[3].SetActive(false);
+            Debug.Log("２：呼ばれた");
+        }
+        if (currentNum == 2)
+        {
+            TitleImage[0].SetActive(false);
+            TitleImage[1].SetActive(false);
+            TitleImage[2].SetActive(true);
+            TitleImage[3].SetActive(false);
+            Debug.Log("３：呼ばれた");
+        }
+        if (currentNum == 3)
+        {
+            TitleImage[0].SetActive(false);
+            TitleImage[1].SetActive(false);
+            TitleImage[2].SetActive(false);
+            TitleImage[3].SetActive(true);
+            Debug.Log("４：呼ばれた");
+        }
     }
 }

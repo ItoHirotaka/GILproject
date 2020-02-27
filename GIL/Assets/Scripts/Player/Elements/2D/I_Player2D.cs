@@ -9,8 +9,11 @@ public class I_Player2D : MonoBehaviour
     float addGravity = 0f;
     void Start()
     {
-        this.gameObject.layer = 12;
         rb = this.GetComponent<Rigidbody2D>();
+        var physic = rb.sharedMaterial;
+
+        physic.friction = 0.2f;
+        this.gameObject.layer = 12;
     }
 
     private void Update()

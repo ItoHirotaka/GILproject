@@ -14,8 +14,10 @@ public class G_Player2D : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        var physic = rb.sharedMaterial;
+
+        physic.friction = 0.9f;
         this.gameObject.layer = 11;
-        
     }
 
     // Update is called once per frame

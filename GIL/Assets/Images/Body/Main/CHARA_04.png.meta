@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 0c6d5cc69fa5b324e9f1e7e88c4a9834
+guid: 3763fa9fe9083354d9736fd20a51847c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CHARA_01_0
-    21300002: CHARA_01_1
-    21300004: CHARA_01_2
-    21300006: CHARA_01_3
-    21300008: CHARA_01_4
-    21300010: CHARA_01_5
-    21300012: CHARA_01_6
-    21300014: CHARA_01_7
-    21300016: CHARA_01_8
-    21300018: CHARA_01_9
-    21300020: CHARA_01_10
-    21300022: CHARA_01_11
-    21300024: CHARA_01_12
-    21300026: CHARA_01_13
-    21300028: CHARA_01_14
-    21300030: CHARA_01_15
-    21300032: CHARA_01_16
-    21300034: CHARA_01_17
+    21300000: CHARA_04_0
+    21300002: CHARA_04_1
+    21300004: CHARA_04_2
+    21300006: CHARA_04_3
+    21300008: CHARA_04_4
+    21300010: CHARA_04_5
+    21300012: CHARA_04_6
+    21300014: CHARA_04_7
+    21300016: CHARA_04_8
+    21300018: CHARA_04_9
+    21300020: CHARA_04_10
+    21300022: CHARA_04_11
+    21300024: CHARA_04_12
+    21300026: CHARA_04_13
+    21300028: CHARA_04_14
+    21300030: CHARA_04_15
+    21300032: CHARA_04_16
+    21300034: CHARA_04_17
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CHARA_01_0
+      name: CHARA_04_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,13 +127,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ee40a302400e484aba87878075e2a9d
+      spriteID: d37abca3ab4663b4c88b92f2c9034834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_1
+      name: CHARA_04_1
       rect:
         serializedVersion: 2
         x: 128
@@ -147,13 +147,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f49ade03ee0934184d375ecbc2f9e2
+      spriteID: 3ecfc39ff0d0b3c48a8a40c025dfea04
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_2
+      name: CHARA_04_2
       rect:
         serializedVersion: 2
         x: 256
@@ -167,13 +167,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315cbdbfa2019ab4fbd93adcf5266d41
+      spriteID: c6019fcc48021b947b9d6f4b879b432d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_3
+      name: CHARA_04_3
       rect:
         serializedVersion: 2
         x: 384
@@ -187,13 +187,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceae9942f8f75d44588e0047c74c8e1c
+      spriteID: 64d786e39a6cda944b6ec3b6fdca8cf3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_4
+      name: CHARA_04_4
       rect:
         serializedVersion: 2
         x: 512
@@ -207,13 +207,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 085b4172f95e8784b8220665154725ff
+      spriteID: 543455755d382bb4aa273f8db8fa5e68
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_5
+      name: CHARA_04_5
       rect:
         serializedVersion: 2
         x: 640
@@ -227,13 +227,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2af2d60f13901204c8d32f68862b76ba
+      spriteID: f004bfecf7669ce40994848696b69702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_6
+      name: CHARA_04_6
       rect:
         serializedVersion: 2
         x: 768
@@ -247,13 +247,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93eff46a07325cd4eaed2f4a74df0b6f
+      spriteID: 1239a115441ff5c4da20d10e59a294e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_7
+      name: CHARA_04_7
       rect:
         serializedVersion: 2
         x: 896
@@ -267,13 +267,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 262f79dfe1245de48a24556f070538d5
+      spriteID: 964316d62f54533469f4b68de1bba63e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_8
+      name: CHARA_04_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -287,13 +287,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b553af9e285042440b3c676a29b81cae
+      spriteID: 38b80f005bbd7274fbae4c5711b8fe91
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_9
+      name: CHARA_04_9
       rect:
         serializedVersion: 2
         x: 0
@@ -307,13 +307,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dca60b2bf15485541a76a4ba01a1c1f5
+      spriteID: 41b01b5b37d1a3c4fb3512620d6c56d7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_10
+      name: CHARA_04_10
       rect:
         serializedVersion: 2
         x: 128
@@ -327,13 +327,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ca11142c726bfc4cb6461bf6244b1cb
+      spriteID: 6a4dff3c0d5fd6b4fa4d7309ef4e20dc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_11
+      name: CHARA_04_11
       rect:
         serializedVersion: 2
         x: 256
@@ -347,13 +347,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28ce7def097a6514e9abfbee434c48ac
+      spriteID: 21970a3c46991aa45b0233ebd0eaf055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_12
+      name: CHARA_04_12
       rect:
         serializedVersion: 2
         x: 384
@@ -367,13 +367,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35daf3ab350618748bbd5e4a4e075d44
+      spriteID: ae0a23cb345e0e74f9f00d057fe8b455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_13
+      name: CHARA_04_13
       rect:
         serializedVersion: 2
         x: 512
@@ -387,13 +387,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c55c2429ae2640499393526452d5f65
+      spriteID: 5cae595dd10b4f047aaa8a62dc9f835f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_14
+      name: CHARA_04_14
       rect:
         serializedVersion: 2
         x: 640
@@ -407,13 +407,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67c82ca9ef703e4696a7943489e6eeb
+      spriteID: 859ba5c0d091e334ba13f479994ee1ed
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_15
+      name: CHARA_04_15
       rect:
         serializedVersion: 2
         x: 768
@@ -427,13 +427,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e07683150078654a99bef23b09b6bf9
+      spriteID: 55c873546bc40c84d8a32b154d23bf9a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_16
+      name: CHARA_04_16
       rect:
         serializedVersion: 2
         x: 896
@@ -447,13 +447,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f49dd607fe673f45a7b0dd54754ca01
+      spriteID: 3cdc300c823cf1a439d91fbbeea4f3a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CHARA_01_17
+      name: CHARA_04_17
       rect:
         serializedVersion: 2
         x: 1024
@@ -467,7 +467,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52e70d97718a2084c9181a82b363cc6e
+      spriteID: 04bf884681f22894f968cfcd5f281782
       vertices: []
       indices: 
       edges: []
@@ -475,7 +475,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 059f98fcf56480645871c6c653e73f99
+    spriteID: 1726ac20578ec9b4ab56a66f7f1e3a5b
     vertices: []
     indices: 
     edges: []

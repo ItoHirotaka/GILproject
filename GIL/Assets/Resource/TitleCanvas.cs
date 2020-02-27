@@ -7,25 +7,18 @@ using UnityEngine.SceneManagement;
 public class TitleCanvas : MonoBehaviour
 {
     [SerializeField]
+    TitleSystem system;
+
+    [SerializeField]
     int StageMax; //ステージの数によって切り替えてね。
 
-    int currentNum;
-
     public GameObject[] TitleImage;
-
-    //イメージの取得
-    //Image image;
-    //Sprite sprite;
-
-    //SpriteRenderer MainSpriteRenderer;
-    //public Sprite[] sprites;
+    public int currentNum { get; private set; }
 
     private void Start()
     {
-        //TitleImage[0] = transform.Find("Resource/Title_01").gameObject;
-        //TitleImage[1] = transform.Find("Resource/Title_02").gameObject;
-        //TitleImage[2] = transform.Find("Resource/Title_03").gameObject;
-        //TitleImage[3] = transform.Find("Resource/Title_04").gameObject;
+        // コンポーネントの取得
+        system = this.GetComponent<TitleSystem>();
 
         StageMax = 3; //仮置きで3にしておきます。
         if (PlayerPrefs.HasKey("StageNum"))
@@ -36,13 +29,15 @@ public class TitleCanvas : MonoBehaviour
         {
             currentNum = 0;
         }
-
-        // このobjectのSpriteRendererを取得
-        //MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentNum > 0) 
+        TitleInpuut();
+    }
+
+    private void TitleInpuut()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentNum > 0)
         {
             currentNum -= 1;
             Change();
@@ -56,10 +51,8 @@ public class TitleCanvas : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            PlayerPrefs.SetInt("StageNum", currentNum);
-            SceneManager.LoadScene("GameMain2D");
+
         }
-        Change();
     }
 
     private void Change()
@@ -100,4 +93,6 @@ public class TitleCanvas : MonoBehaviour
             Debug.Log("４：呼ばれた");
         }
     }
+
+
 }

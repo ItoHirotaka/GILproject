@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739053255b6dc2343b9390a461bfd40d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  system: {fileID: 1741248312}
   StageMax: 3
   TitleImage:
   - {fileID: 1821861011}
@@ -743,7 +744,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e6a6d047ad22c45aa1c93bb614642d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Canvas: {fileID: 553515807}
   FadeImage: {fileID: 518017931}
+  timeLimit: 4
 --- !u!4 &1741248313
 Transform:
   m_ObjectHideFlags: 0

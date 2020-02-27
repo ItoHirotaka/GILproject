@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClearDirector2D : MonoBehaviour
 {
@@ -31,11 +32,16 @@ public class ClearDirector2D : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    float DontControlTime = 4f; // テストの値です。Inspectorで調整してください
+    float count;
     // ゲーム状態を変更する
     public void Clear()
     {
         // クリアフラグを立てる
         isClear = true;
+        // 演出時間の初期化
+        count = DontControlTime;
         // フェードイン
         fadeUi.ChangeState(FadeUi.FadeState.FadeIn);
         // プレイヤーの操作を無効化
@@ -45,6 +51,11 @@ public class ClearDirector2D : MonoBehaviour
     // ゲームクリア時の更新処理
     void UpdateClear()
     {
-
+        count -= Time.deltaTime;
+        // 時間経過でゲームメインをロード
+        if (count < 0f)
+        {
+            SceneManager.LoadScene("Title");
+        }
     }
 }

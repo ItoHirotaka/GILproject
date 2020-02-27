@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 8524127931572743627}
   - component: {fileID: 8524127931572743624}
   - component: {fileID: 4446871297307698260}
-  - component: {fileID: 7824073789496448353}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -203,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0771027a24c00e499eb5dae27a520eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxPow: 2
-  thrust: 10
+  MaxPow: 1.2
+  thrust: 6
   rb: {fileID: 8524127931572743627}
   liquidPref: {fileID: 1403940857592224001, guid: 10e04313790e3254eaec7a148ca5f12a,
     type: 3}
@@ -274,15 +273,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 8300000, guid: a58d221fbd704ba449b950109f6b1c45, type: 3}
---- !u!114 &7824073789496448353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8524127931572743625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a3adaa305e9e04a8794d6f207df910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

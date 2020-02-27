@@ -39,6 +39,8 @@ public class PlayerController2D : MonoBehaviour
     ElementalCanvas elementalCanvas;
     // 効果音用
     TransformSound sound;
+    // アニメーション管理用
+    public bool IsMove { get; private set; }
 
     void Start()
     {
@@ -55,6 +57,8 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // アニメーション用移動フラグを落とす
+        IsMove = false;
         // 操作出来る状態なら
         if (canControl)
         {
@@ -90,6 +94,8 @@ public class PlayerController2D : MonoBehaviour
         }
         else if (Hori < 0f) // 左方向の入力がある時
         {
+            // アニメーション用移動フラグ
+            IsMove = true;
             // 移動処理
             bool canMove_L = rb.velocity.x > -MaxPow;
             if (canMove_L)
@@ -103,6 +109,8 @@ public class PlayerController2D : MonoBehaviour
         }
         else // 右方向の入力がある時
         {
+            // アニメーション用移動フラグ
+            IsMove = true;
             // 移動処理
             bool canMove_R = rb.velocity.x < MaxPow;
             if (canMove_R)
@@ -188,24 +196,39 @@ public class PlayerController2D : MonoBehaviour
     // 現在の状態を見て、新しいBodyに変更する
     void ChangeBody()
     {
+        bool isLeft = false; // 現在の向きを保存する変数
+
         // 現在のBodyを破壊
         foreach (Transform c in this.transform)
         {
             // 取得した子オブジェクトのタグが"Body"の場合破壊する
             if (c.tag == "Body")
             {
+                if (c.localScale.x < 0f) isLeft = true;
                 GameObject.Destroy(c.gameObject);
                 break;
             }
         }
 
         // Bodyを生成
+        GameObject body = null;
         switch (playerState)
         {
-            case PlayerStateEnum2D.LIQUID: Instantiate(liquidPref, this.transform); break;
-            case PlayerStateEnum2D.ICE: Instantiate(icePref, this.transform); break;
-            case PlayerStateEnum2D.STEAM: Instantiate(steamPref, this.transform); break;
+            case PlayerStateEnum2D.LIQUID: body = Instantiate(liquidPref, this.transform); break;
+            case PlayerStateEnum2D.ICE: body = Instantiate(icePref, this.transform); break;
+            case PlayerStateEnum2D.STEAM: body = Instantiate(steamPref, this.transform); break;
             default: SendMessage("存在しないプレイヤーの状態です"); break;
+        }
+
+        // 生成したBodyを子に設定
+        body.transform.SetParent(this.gameObject.transform);
+
+        // Bodyの向きを変更
+        if (isLeft)
+        {
+            Vector3 vec = body.transform.localScale;
+            vec.x *= -1f;
+            body.transform.localScale = vec;
         }
     }
 

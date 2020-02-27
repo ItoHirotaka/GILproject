@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6533022492592190646}
   - component: {fileID: 4163809872715934765}
   - component: {fileID: 2479571174701504935}
+  - component: {fileID: 114330234108180858}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Body
@@ -99,3 +100,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114330234108180858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403940857592224001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a3adaa305e9e04a8794d6f207df910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

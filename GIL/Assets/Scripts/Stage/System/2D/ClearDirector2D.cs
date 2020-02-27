@@ -18,7 +18,9 @@ public class ClearDirector2D : MonoBehaviour
     void Start()
     {
         // コンポーネントの取得
+        FadeImage = GameObject.Find("Black");
         fadeUi = FadeImage.GetComponent<FadeUi>();
+        player = GameObject.Find("Player");
         playerTr = player.transform;
         // 開始状態の初期化
         isClear = false;

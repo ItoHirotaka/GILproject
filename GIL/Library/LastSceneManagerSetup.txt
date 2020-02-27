@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/TestScenes/Base/BaseMapChip.unity
+- path: Assets/Scenes/TestScenes/SoundTest.unity
   isLoaded: 1
   isActive: 1

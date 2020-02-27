@@ -60,8 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 0}
-  player: {fileID: 0}
-  startPos: {fileID: 0}
+  player: {fileID: 8524127931572743625, guid: d5d65d39b8a21d24fadd5033d6fe1507, type: 3}
   DontControlTime: 3
 --- !u!114 &3909272973439782906
 MonoBehaviour:
@@ -76,7 +75,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 8524127931572743625, guid: d5d65d39b8a21d24fadd5033d6fe1507, type: 3}
+  DontControlTime: 4
 --- !u!114 &3909272973439782905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   DeathSound: {fileID: 8300000, guid: ba919808e535027448e1b10ec44c85da, type: 3}
   FadeImage: {fileID: 0}
   Elemental: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 8524127931572743625, guid: d5d65d39b8a21d24fadd5033d6fe1507, type: 3}
   image_object: {fileID: 0}
   image: {fileID: 0}
   DontControlTime: 4

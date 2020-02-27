@@ -204,7 +204,7 @@ MonoBehaviour:
   MaxPow: 2
   thrust: 10
   rb: {fileID: 8524127931572743627}
-  liquidPref: {fileID: 3615018877507851036, guid: 10e04313790e3254eaec7a148ca5f12a,
+  liquidPref: {fileID: 1403940857592224001, guid: 10e04313790e3254eaec7a148ca5f12a,
     type: 3}
   icePref: {fileID: 891136246529989061, guid: bc43354f3376a8547a1d1ad1c9f05c2f, type: 3}
   steamPref: {fileID: 3117158688440967160, guid: f6e4bb10d46b0024bab783bef74e6d83,

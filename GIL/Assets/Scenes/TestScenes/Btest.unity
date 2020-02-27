@@ -696,6 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSound: {fileID: 8300000, guid: ba919808e535027448e1b10ec44c85da, type: 3}
   FadeImage: {fileID: 126014977}
+  Elemental: {fileID: 0}
   player: {fileID: 1341918293}
   image_object: {fileID: 406740006}
   image: {fileID: 406740008}
@@ -714,6 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 126014977}
   player: {fileID: 1341918293}
+  DontControlTime: 4
 --- !u!114 &556863982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 126014977}
   player: {fileID: 1341918293}
-  startPos: {fileID: 557785939}
   DontControlTime: 3
 --- !u!114 &556863983
 MonoBehaviour:
@@ -1123,7 +1124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a6e72feeb09b4ca21a7f373ed4201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameSystem: {fileID: 556863979}
 --- !u!61 &812364171
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour
 {
-    [SerializeField]
-    AudioClip bgm;
-    // Start is called before the first frame update
-    void Start()
+    private static GameObject mInstance;
+
+    public static GameObject Instance
     {
-        // BGMを再生
-        AudioSource.PlayClipAtPoint(bgm, this.gameObject.transform.position);
-        // このオブジェクトを破壊しないようにする
-        DontDestroyOnLoad(this.gameObject);
+        get
+        {
+            return mInstance;
+        }
+    }
+
+    void Awake()
+    {
+        if (mInstance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            mInstance = gameObject;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

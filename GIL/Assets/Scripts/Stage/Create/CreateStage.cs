@@ -15,6 +15,6 @@ public class CreateStage : MonoBehaviour
     void Create()
     {
         int stageNum = PlayerPrefs.GetInt("StageNum");
-        GameObject obj = Instantiate(Stages[stageNum]);
+        GameObject obj = Instantiate(Stages[stageNum], transform.position, Quaternion.identity);
     }
 }

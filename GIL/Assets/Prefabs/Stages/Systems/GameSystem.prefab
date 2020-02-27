@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3909272973439782906}
   - component: {fileID: 3909272973439782905}
   - component: {fileID: 3909272973439782904}
+  - component: {fileID: 296039907}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 0}
-  player: {fileID: 8524127931572743625, guid: d5d65d39b8a21d24fadd5033d6fe1507, type: 3}
+  player: {fileID: 0}
   DontControlTime: 3
 --- !u!114 &3909272973439782906
 MonoBehaviour:
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 0}
-  player: {fileID: 8524127931572743625, guid: d5d65d39b8a21d24fadd5033d6fe1507, type: 3}
+  player: {fileID: 0}
   DontControlTime: 4
 --- !u!114 &3909272973439782905
 MonoBehaviour:
@@ -92,7 +93,7 @@ MonoBehaviour:
   DeathSound: {fileID: 8300000, guid: ba919808e535027448e1b10ec44c85da, type: 3}
   FadeImage: {fileID: 0}
   Elemental: {fileID: 0}
-  player: {fileID: 8524127931572743625, guid: d5d65d39b8a21d24fadd5033d6fe1507, type: 3}
+  player: {fileID: 0}
   image_object: {fileID: 0}
   image: {fileID: 0}
   DontControlTime: 4
@@ -192,3 +193,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &296039907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909272973439782903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d9fcfb5e1682642b256551c25660f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stages:
+  - {fileID: 6229234890890716795, guid: 56b25659ed8004f48947f653fe4e0be6, type: 3}
+  - {fileID: 8539222523908019432, guid: de36108f4d83fed41bdc084f2923dda8, type: 3}
+  - {fileID: 2463584682019467422, guid: b42b12279f26a98459b386b2d09efe47, type: 3}
+  - {fileID: 2463584682019467422, guid: b42b12279f26a98459b386b2d09efe47, type: 3}

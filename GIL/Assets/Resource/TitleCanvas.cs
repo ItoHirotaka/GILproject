@@ -19,8 +19,6 @@ public class TitleCanvas : MonoBehaviour
     {
         // コンポーネントの取得
         system = this.GetComponent<TitleSystem>();
-
-        StageMax = 3; //仮置きで3にしておきます。
         if (PlayerPrefs.HasKey("StageNum"))
         {
             currentNum = PlayerPrefs.GetInt("StageNum");
@@ -29,6 +27,9 @@ public class TitleCanvas : MonoBehaviour
         {
             currentNum = 0;
         }
+
+        // 初期の画像をセット
+        Change();
     }
     void Update()
     {

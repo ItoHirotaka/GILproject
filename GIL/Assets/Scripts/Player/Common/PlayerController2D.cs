@@ -40,12 +40,16 @@ public class PlayerController2D : MonoBehaviour
     // 属性変更用
     ElementalCanvas elementalCanvas;
 
+    // 効果音用
+    TransformSound sound;
+
     void Start()
     {
         // コンポーネントの取得
         rb = this.GetComponent<Rigidbody2D>();
         GameObject canvas = GameObject.Find("ElementalCanvas");
         elementalCanvas = canvas.GetComponent<ElementalCanvas>();
+        sound = this.GetComponent<TransformSound>();
         // モデルの向きを初期化
         isRightModel = true;
         // 状態を初期化し、Bodyを生成
@@ -73,6 +77,7 @@ public class PlayerController2D : MonoBehaviour
             {
                 ChangeState();
                 elementalCanvas.ChangeImage(playerState);
+                sound.PlaySound();
             }
         }
     }

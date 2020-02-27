@@ -40,6 +40,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8879991376339926737}
     m_Modifications:
+    - target: {fileID: 4516055550581018590, guid: ffdb0e5960adf3642a30089a558e465a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020852419108100703, guid: ffdb0e5960adf3642a30089a558e465a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9091206865489523021, guid: ffdb0e5960adf3642a30089a558e465a,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2052,6 +2062,11 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[66].second.m_ColliderType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9091206865489523026, guid: ffdb0e5960adf3642a30089a558e465a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9091206865939571505, guid: ffdb0e5960adf3642a30089a558e465a,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2278,6 +2293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileMatrixArray.Array.data[1].m_Data.e33
       value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091206865939571510, guid: ffdb0e5960adf3642a30089a558e465a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9091206866295370864, guid: ffdb0e5960adf3642a30089a558e465a,
         type: 3}
@@ -2564,6 +2584,16 @@ PrefabInstance:
     - target: {fileID: 9091206866295370864, guid: ffdb0e5960adf3642a30089a558e465a,
         type: 3}
       propertyPath: m_Tiles.Array.data[0].first.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091206866295370865, guid: ffdb0e5960adf3642a30089a558e465a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091206866398367340, guid: ffdb0e5960adf3642a30089a558e465a,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9091206866398367343, guid: ffdb0e5960adf3642a30089a558e465a,

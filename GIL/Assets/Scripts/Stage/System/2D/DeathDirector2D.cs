@@ -35,14 +35,18 @@ public class DeathDirector2D : MonoBehaviour
     void Start()
     {
         // コンポーネントの取得
+        FadeImage = GameObject.Find("Black");
         fadeUi = FadeImage.GetComponent<FadeUi>();
+        player = GameObject.Find("Player");
+        Elemental = GameObject.Find("ElementalCanvas");
         elementalCanvas = Elemental.GetComponent<ElementalCanvas>();
         // 死亡状態の初期化
         isDeath = false;
         //音のコンポーネントを取得
         audioSource = GetComponent<AudioSource>();
         // オブジェクトの取得
-        image_object = GameObject.Find("Image");
+        image_object = GameObject.Find("Blood");
+        image = image_object.GetComponent<Image>();
         red = image.color.r;
         green = image.color.g;
         blue = image.color.b;

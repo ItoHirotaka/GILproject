@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2479571174701504935}
   m_Layer: 0
   m_Name: Liquid
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ Animator:
   m_GameObject: {fileID: 1403940857592224001}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 953c53850208a3a4e811a79ff7e99b1b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 81242fc0ae166c0488957220caa754db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

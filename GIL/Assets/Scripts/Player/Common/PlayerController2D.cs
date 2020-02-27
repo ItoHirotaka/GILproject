@@ -26,8 +26,6 @@ public class PlayerController2D : MonoBehaviour
     float thrust;
     [SerializeField]
     public Rigidbody2D rb;
-    // モデルが右を向いているかを管理する
-    bool isRightModel;
 
     // BodyのPrefab
     [SerializeField]
@@ -39,22 +37,20 @@ public class PlayerController2D : MonoBehaviour
 
     // 属性変更用
     ElementalCanvas elementalCanvas;
-
     // 効果音用
     TransformSound sound;
 
     void Start()
     {
+        // 状態を初期化し、Bodyを生成
+        playerState = PlayerStateEnum2D.NONE;
+        ChangeState();
+
         // コンポーネントの取得
         rb = this.GetComponent<Rigidbody2D>();
         GameObject canvas = GameObject.Find("ElementalCanvas");
         elementalCanvas = canvas.GetComponent<ElementalCanvas>();
         sound = this.GetComponent<TransformSound>();
-        // モデルの向きを初期化
-        isRightModel = true;
-        // 状態を初期化し、Bodyを生成
-        playerState = PlayerStateEnum2D.NONE;
-        ChangeState();
     }
 
     private void FixedUpdate()
@@ -102,13 +98,8 @@ public class PlayerController2D : MonoBehaviour
                 Vector3 force = new Vector3(thrust * Hori, 0.0f, 0.0f);
                 rb.AddForce(force);
             }
-
-            // モデルの向きを変える
-            if (isRightModel)
-            {
-                isRightModel = false;
-                TurnModel();
-            }
+            // モデルの向きを変更
+            TurnModel(true);
         }
         else // 右方向の入力がある時
         {
@@ -120,18 +111,13 @@ public class PlayerController2D : MonoBehaviour
                 Vector3 force = new Vector3(thrust * Hori, 0.0f, 0.0f);
                 rb.AddForce(force);
             }
-
-            // モデルの向きを変える
-            if (!isRightModel)
-            {
-                isRightModel = true;
-                TurnModel();
-            }
+            // モデルの向きを変更
+            TurnModel(false);
         }
     }
 
     // モデルの向きを左右反転させる
-    void TurnModel()
+    void TurnModel(bool _isLeft)
     {
         // 子オブジェクトからBodyを取得
         foreach (Transform c in this.transform)
@@ -140,7 +126,12 @@ public class PlayerController2D : MonoBehaviour
             if (c.tag == "Body")
             {
                 Vector3 vec = c.transform.localScale;
-                vec.x *= -1f;
+                bool isTurn_L = _isLeft && vec.x > 0f;
+                bool isTurn_R = !_isLeft && vec.x < 0f;
+                if (isTurn_L || isTurn_R)
+                {
+                    vec.x *= -1f;
+                }
                 c.transform.localScale = vec;
                 break;
             }
@@ -152,10 +143,10 @@ public class PlayerController2D : MonoBehaviour
     {
         // 次の状態をセット
         SetNextState();
-        // 新しい状態のコンポーネントへ切り替える
-        ChangeFoamComponent();
         // 新しいBodyを生成
         ChangeBody();
+        // 新しい状態のコンポーネントへ切り替える
+        ChangeFoamComponent();
     }
 
     // 現在の状態を見て、次の状態をセットする
@@ -223,5 +214,4 @@ public class PlayerController2D : MonoBehaviour
     {
         canControl = _isUse;
     }
-
 }

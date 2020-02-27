@@ -12,7 +12,7 @@ public class Wind : MonoBehaviour
         GameSystem = system.GetComponent<GameSystem2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 11)
         {

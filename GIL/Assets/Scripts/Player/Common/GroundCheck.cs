@@ -17,19 +17,18 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool isGround = collision.gameObject.tag == "Stage";
-        if (isGround && isDeath())
+        if (isDeath())
         {
             gameSystem.GetComponent<GameSystem2D>().Death();
         }
     }
 
     [SerializeField]
-    float DeathFall = -13f;  // 死亡判定にする速さ
+    float DeathSpeed = 6f;  // 死亡判定にする速さ
     bool isDeath()
     {
-        bool isDeathHight = rb.velocity.y < DeathFall;
+        bool isDeathSpeed = rb.velocity.y < -DeathSpeed;
         bool isIce = player.layer == ICE_LAYER;
-        return isDeathHight && isIce;
+        return isDeathSpeed && isIce;
     }
 }

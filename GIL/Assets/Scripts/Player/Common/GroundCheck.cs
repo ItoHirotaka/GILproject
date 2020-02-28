@@ -24,7 +24,7 @@ public class GroundCheck : MonoBehaviour
     }
 
     [SerializeField]
-    float DeathSpeed = 6f;  // 死亡判定にする速さ
+    float DeathSpeed = 7.2f;  // 死亡判定にする速さ
     bool isDeath()
     {
         bool isDeathSpeed = rb.velocity.y < -DeathSpeed;

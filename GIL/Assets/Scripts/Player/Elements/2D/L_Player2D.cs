@@ -10,7 +10,9 @@ public class L_Player2D : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         CircleCollider2D collider = this.GetComponent<CircleCollider2D>();
-        collider.sharedMaterial.friction = 0f;
+        PhysicsMaterial2D material = collider.sharedMaterial;
+        material.friction = 0.85f;
+        collider.sharedMaterial = material;
         this.gameObject.layer = 10;
     }
 

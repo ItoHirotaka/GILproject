@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5262841130777290045, guid: e2cdc2a16d53edd4bbad64b7f7772155,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2cdc2a16d53edd4bbad64b7f7772155, type: 3}
 --- !u!1 &192567983
@@ -297,28 +302,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &296039906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3909272973439782903, guid: 19871d4857cfcd646a6a6fb10bd0705f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1021017535}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &296039907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296039906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d9fcfb5e1682642b256551c25660f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Stages:
-  - {fileID: 6229234890890716795, guid: 56b25659ed8004f48947f653fe4e0be6, type: 3}
-  - {fileID: 8539222523908019432, guid: de36108f4d83fed41bdc084f2923dda8, type: 3}
-  - {fileID: 2463584682019467422, guid: b42b12279f26a98459b386b2d09efe47, type: 3}
 --- !u!1 &491289676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5262841129595412711, guid: e2cdc2a16d53edd4bbad64b7f7772155,
@@ -620,21 +603,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1090188614}
-    - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
-        type: 3}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 491289678}
-    - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
-        type: 3}
-      propertyPath: image_object
-      value: 
-      objectReference: {fileID: 491289676}
-    - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
-        type: 3}
       propertyPath: FadeImage
       value: 
       objectReference: {fileID: 1445777564}
@@ -643,12 +611,32 @@ PrefabInstance:
       propertyPath: Elemental
       value: 
       objectReference: {fileID: 943505168}
+    - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1090188614}
+    - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
+        type: 3}
+      propertyPath: image_object
+      value: 
+      objectReference: {fileID: 491289676}
+    - target: {fileID: 3909272973439782905, guid: 19871d4857cfcd646a6a6fb10bd0705f,
+        type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 491289678}
+    - target: {fileID: 3909272973439782906, guid: 19871d4857cfcd646a6a6fb10bd0705f,
+        type: 3}
+      propertyPath: FadeImage
+      value: 
+      objectReference: {fileID: 1445777564}
     - target: {fileID: 3909272973439782906, guid: 19871d4857cfcd646a6a6fb10bd0705f,
         type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1090188614}
-    - target: {fileID: 3909272973439782906, guid: 19871d4857cfcd646a6a6fb10bd0705f,
+    - target: {fileID: 3909272973439782907, guid: 19871d4857cfcd646a6a6fb10bd0705f,
         type: 3}
       propertyPath: FadeImage
       value: 
@@ -658,11 +646,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1090188614}
-    - target: {fileID: 3909272973439782907, guid: 19871d4857cfcd646a6a6fb10bd0705f,
-        type: 3}
-      propertyPath: FadeImage
-      value: 
-      objectReference: {fileID: 1445777564}
     - target: {fileID: 3909272973439782909, guid: 19871d4857cfcd646a6a6fb10bd0705f,
         type: 3}
       propertyPath: m_LocalPosition.x

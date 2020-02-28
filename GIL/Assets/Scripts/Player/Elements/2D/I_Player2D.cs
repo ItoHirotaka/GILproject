@@ -6,11 +6,13 @@ public class I_Player2D : MonoBehaviour
 {
     Rigidbody2D rb = null;
     [SerializeField]
-    float addGravity = 4f;
+    float addGravity = 0f;
     void Start()
     {
-        this.gameObject.layer = 12;
         rb = this.GetComponent<Rigidbody2D>();
+        CircleCollider2D collider = this.GetComponent<CircleCollider2D>();
+        collider.sharedMaterial.friction = 0.1f;
+        this.gameObject.layer = 12;
     }
 
     private void Update()

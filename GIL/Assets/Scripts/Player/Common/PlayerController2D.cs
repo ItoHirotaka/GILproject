@@ -26,8 +26,6 @@ public class PlayerController2D : MonoBehaviour
     float thrust;
     [SerializeField]
     public Rigidbody2D rb;
-    // モデルが右を向いているかを管理する
-    bool isRightModel;
 
     // BodyのPrefab
     [SerializeField]
@@ -39,26 +37,28 @@ public class PlayerController2D : MonoBehaviour
 
     // 属性変更用
     ElementalCanvas elementalCanvas;
-
     // 効果音用
     TransformSound sound;
+    // アニメーション管理用
+    public bool IsMove { get; private set; }
 
     void Start()
     {
+        // 状態を初期化し、Bodyを生成
+        playerState = PlayerStateEnum2D.NONE;
+        ChangeState();
+
         // コンポーネントの取得
         rb = this.GetComponent<Rigidbody2D>();
         GameObject canvas = GameObject.Find("ElementalCanvas");
         elementalCanvas = canvas.GetComponent<ElementalCanvas>();
         sound = this.GetComponent<TransformSound>();
-        // モデルの向きを初期化
-        isRightModel = true;
-        // 状態を初期化し、Bodyを生成
-        playerState = PlayerStateEnum2D.NONE;
-        ChangeState();
     }
 
     private void FixedUpdate()
     {
+        // アニメーション用移動フラグを落とす
+        IsMove = false;
         // 操作出来る状態なら
         if (canControl)
         {
@@ -94,6 +94,8 @@ public class PlayerController2D : MonoBehaviour
         }
         else if (Hori < 0f) // 左方向の入力がある時
         {
+            // アニメーション用移動フラグ
+            IsMove = true;
             // 移動処理
             bool canMove_L = rb.velocity.x > -MaxPow;
             if (canMove_L)
@@ -102,16 +104,13 @@ public class PlayerController2D : MonoBehaviour
                 Vector3 force = new Vector3(thrust * Hori, 0.0f, 0.0f);
                 rb.AddForce(force);
             }
-
-            // モデルの向きを変える
-            if (isRightModel)
-            {
-                isRightModel = false;
-                TurnModel();
-            }
+            // モデルの向きを変更
+            TurnModel(true);
         }
         else // 右方向の入力がある時
         {
+            // アニメーション用移動フラグ
+            IsMove = true;
             // 移動処理
             bool canMove_R = rb.velocity.x < MaxPow;
             if (canMove_R)
@@ -120,18 +119,13 @@ public class PlayerController2D : MonoBehaviour
                 Vector3 force = new Vector3(thrust * Hori, 0.0f, 0.0f);
                 rb.AddForce(force);
             }
-
-            // モデルの向きを変える
-            if (!isRightModel)
-            {
-                isRightModel = true;
-                TurnModel();
-            }
+            // モデルの向きを変更
+            TurnModel(false);
         }
     }
 
     // モデルの向きを左右反転させる
-    void TurnModel()
+    void TurnModel(bool _isLeft)
     {
         // 子オブジェクトからBodyを取得
         foreach (Transform c in this.transform)
@@ -140,7 +134,12 @@ public class PlayerController2D : MonoBehaviour
             if (c.tag == "Body")
             {
                 Vector3 vec = c.transform.localScale;
-                vec.x *= -1f;
+                bool isTurn_L = _isLeft && vec.x > 0f;
+                bool isTurn_R = !_isLeft && vec.x < 0f;
+                if (isTurn_L || isTurn_R)
+                {
+                    vec.x *= -1f;
+                }
                 c.transform.localScale = vec;
                 break;
             }
@@ -152,10 +151,10 @@ public class PlayerController2D : MonoBehaviour
     {
         // 次の状態をセット
         SetNextState();
-        // 新しい状態のコンポーネントへ切り替える
-        ChangeFoamComponent();
         // 新しいBodyを生成
         ChangeBody();
+        // 新しい状態のコンポーネントへ切り替える
+        ChangeFoamComponent();
     }
 
     // 現在の状態を見て、次の状態をセットする
@@ -197,24 +196,39 @@ public class PlayerController2D : MonoBehaviour
     // 現在の状態を見て、新しいBodyに変更する
     void ChangeBody()
     {
+        bool isLeft = false; // 現在の向きを保存する変数
+
         // 現在のBodyを破壊
         foreach (Transform c in this.transform)
         {
             // 取得した子オブジェクトのタグが"Body"の場合破壊する
             if (c.tag == "Body")
             {
+                if (c.localScale.x < 0f) isLeft = true;
                 GameObject.Destroy(c.gameObject);
                 break;
             }
         }
 
         // Bodyを生成
+        GameObject body = null;
         switch (playerState)
         {
-            case PlayerStateEnum2D.LIQUID: Instantiate(liquidPref, this.transform); break;
-            case PlayerStateEnum2D.ICE: Instantiate(icePref, this.transform); break;
-            case PlayerStateEnum2D.STEAM: Instantiate(steamPref, this.transform); break;
+            case PlayerStateEnum2D.LIQUID: body = Instantiate(liquidPref, this.transform); break;
+            case PlayerStateEnum2D.ICE: body = Instantiate(icePref, this.transform); break;
+            case PlayerStateEnum2D.STEAM: body = Instantiate(steamPref, this.transform); break;
             default: SendMessage("存在しないプレイヤーの状態です"); break;
+        }
+
+        // 生成したBodyを子に設定
+        body.transform.SetParent(this.gameObject.transform);
+
+        // Bodyの向きを変更
+        if (isLeft)
+        {
+            Vector3 vec = body.transform.localScale;
+            vec.x *= -1f;
+            body.transform.localScale = vec;
         }
     }
 
@@ -223,5 +237,4 @@ public class PlayerController2D : MonoBehaviour
     {
         canControl = _isUse;
     }
-
 }

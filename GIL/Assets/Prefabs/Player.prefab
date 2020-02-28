@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b640d1693be31146ba6a72845e93fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathFall: -13
+  DeathFall: -10
 --- !u!1 &8524127931572743625
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0771027a24c00e499eb5dae27a520eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxPow: 2
-  thrust: 10
+  MaxPow: 1.2
+  thrust: 6
   rb: {fileID: 8524127931572743627}
   liquidPref: {fileID: 1403940857592224001, guid: 10e04313790e3254eaec7a148ca5f12a,
     type: 3}

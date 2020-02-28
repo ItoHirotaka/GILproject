@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class G_Player2D : MonoBehaviour
 {
     [SerializeField]
-    float MaxSpeed = 11f; // テスト段階での数値。Inspectorで調整してください
+    float MaxSpeed = 3f; // テスト段階での数値。Inspectorで調整してください
     [SerializeField]
     float Speed = 11f; // テスト段階での数値。Inspectorで調整してください
     Rigidbody2D rb;
@@ -14,8 +14,10 @@ public class G_Player2D : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        var physic = rb.sharedMaterial;
+
+        physic.friction = 0.9f;
         this.gameObject.layer = 11;
-        
     }
 
     // Update is called once per frame

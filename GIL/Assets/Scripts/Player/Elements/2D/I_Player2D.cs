@@ -10,9 +10,8 @@ public class I_Player2D : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        var physic = rb.sharedMaterial;
-
-        physic.friction = 0.2f;
+        CircleCollider2D collider = this.GetComponent<CircleCollider2D>();
+        collider.sharedMaterial.friction = 0.1f;
         this.gameObject.layer = 12;
     }
 
